@@ -25,7 +25,11 @@ export default {
       <div class="center">
         <img src="../assets/img/boolean-logo.png" alt="" />
       </div>
-      <div class="rigth">r</div>
+      <div class="rigth">
+        <i class="fa-regular fa-user"></i>
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-bag-shopping"></i>
+      </div>
     </div>
   </div>
 </template>
@@ -47,6 +51,7 @@ export default {
       width: 40%;
       display: flex;
       span {
+        font-size: 1.2rem;
         margin-right: 20px;
         &:hover {
           color: darken($header-words, 60%);
@@ -60,6 +65,13 @@ export default {
       width: 40%;
       display: flex;
       justify-content: flex-end;
+      i {
+        font-size: 1.2rem;
+        margin-left: 10px;
+        &:hover {
+          color: darken($header-words, 60%);
+        }
+      }
     }
   }
 }
