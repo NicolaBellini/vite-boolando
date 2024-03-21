@@ -44,12 +44,22 @@ export default {};
       justify-content: center;
       padding: 20px;
       width: 70%;
+      h4 {
+        cursor: pointer;
+        &:hover {
+          color: darken($footer-words, 60%);
+        }
+      }
       ul {
         margin-top: 20px;
         display: flex;
         list-style: none;
         li {
           margin-right: 10px;
+          cursor: pointer;
+          &:hover {
+            color: darken($footer-words, 60%);
+          }
         }
       }
     }
@@ -60,9 +70,17 @@ export default {};
       justify-content: center;
       flex-direction: column;
       padding: 20px;
+      h4:hover {
+        cursor: pointer;
+        color: darken($footer-words, 60%);
+      }
       .social-icon i {
         margin-top: 20px;
         margin-right: 5px;
+        cursor: pointer;
+        &:hover {
+          color: darken($footer-words, 60%);
+        }
       }
     }
   }

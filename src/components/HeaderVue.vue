@@ -51,6 +51,7 @@ export default {
       width: 40%;
       display: flex;
       span {
+        cursor: pointer;
         font-size: 1.2rem;
         margin-right: 20px;
         &:hover {
@@ -66,6 +67,7 @@ export default {
       display: flex;
       justify-content: flex-end;
       i {
+        cursor: pointer;
         font-size: 1.2rem;
         margin-left: 10px;
         &:hover {
