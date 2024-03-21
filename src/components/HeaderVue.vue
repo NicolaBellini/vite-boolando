@@ -1,12 +1,27 @@
 <!-- HEADER -->
 <script>
-export default {};
+export default {
+  // data() {
+  //   return {
+  //     logo:'boolean-logo.png',
+  //   }
+  // },
+  // methods: {
+  //   getImage(img){
+  //     return
+  //   }
+  // },
+};
 </script>
 
 <template>
   <div class="wrapper debug">
     <div class="container debug">
-      <div class="left">l</div>
+      <div class="left">
+        <div class="donna"><span>Donna</span></div>
+        <div class="uomo"><span>Uomo</span></div>
+        <div class="bambini"><span>Bambini</span></div>
+      </div>
       <div class="center">
         <img src="../assets/img/boolean-logo.png" alt="" />
       </div>
@@ -30,6 +45,13 @@ export default {};
     align-items: center;
     .left {
       width: 40%;
+      display: flex;
+      span {
+        margin-right: 20px;
+        &:hover {
+          color: darken($header-words, 60%);
+        }
+      }
     }
     .center {
       width: 15%;
