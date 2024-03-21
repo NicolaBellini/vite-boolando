@@ -15,8 +15,8 @@ export default {
 </script>
 
 <template>
-  <div class="wrapper debug">
-    <div class="container debug">
+  <div class="wrapper">
+    <div class="container">
       <div class="left">
         <div class="donna"><span>Donna</span></div>
         <div class="uomo"><span>Uomo</span></div>
