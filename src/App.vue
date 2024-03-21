@@ -1,8 +1,8 @@
 <script>
-import Header from "./components/Header.vue";
-// ???? mi dice che il file è gia stato incluso
-import Main from "./components/Main.vue";
-import Footer from "./components/Footer.vue";
+import Header from "./components/HeaderVue.vue";
+// ???? mi dice che il file è gia stato incluso, ho dovuto mettere mainVue perchè il mip vs code me lo segnava sbagliato
+import Main from "./components/MainVue.vue";
+import Footer from "./components/FooterVue.vue";
 
 export default {
   components: {
