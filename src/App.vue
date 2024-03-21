@@ -1,3 +1,4 @@
+<!-- APP -->
 <script>
 import Header from "./components/HeaderVue.vue";
 // ???? mi dice che il file è gia stato incluso, ho dovuto mettere mainVue perchè il mip vs code me lo segnava sbagliato

@@ -1,7 +1,13 @@
+// UTILS
 @use "../scss/variables" as *;
 
 .debug {
   background-color: rgba(126, 181, 74, 0.284);
+  border: 1px solid orange;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .container {

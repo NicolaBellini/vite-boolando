@@ -1,3 +1,4 @@
+<!-- FOOTER -->
 <script>
 export default {};
 </script>

@@ -1,3 +1,4 @@
+<!-- HEADER -->
 <script>
 export default {};
 </script>
