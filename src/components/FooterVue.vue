@@ -5,8 +5,8 @@ export default {};
 
 <template>
   <div class="wrapper">
-    <div class="container debug">
-      <div class="col-left debug">
+    <div class="container">
+      <div class="col-left">
         <h4>Booleando s.r.l.</h4>
         <ul>
           <li>Informazioni legali</li>
@@ -14,13 +14,26 @@ export default {};
           <li>Diritto di recesso</li>
         </ul>
       </div>
-      <div class="col-rigth debug"></div>
+      <div class="col-rigth">
+        <h4>Trovaci anche su</h4>
+        <div class="social-icon">
+          <!-- icome social -->
+          <i class="fa-brands fa-square-facebook"></i>
+          <i class="fa-brands fa-square-x-twitter"></i>
+          <i class="fa-brands fa-square-instagram"></i>
+          <i class="fa-brands fa-square-pinterest"></i>
+          <i class="fa-brands fa-square-youtube"></i>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+@use "../assets/scss/variables" as *;
 .wrapper {
+  color: $footer-words;
+  background-color: $footer-bg;
   height: 100px;
   .container {
     display: flex;
@@ -43,7 +56,14 @@ export default {};
     .col-rigth {
       width: 30%;
       display: flex;
-      justify-content: flex-end;
+      align-items: flex-end;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+      .social-icon i {
+        margin-top: 20px;
+        margin-right: 5px;
+      }
     }
   }
 }
