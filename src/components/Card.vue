@@ -71,7 +71,7 @@ export default {
       </div>
     </div>
     <div class="info">
-      <div>{{ product.brand }}</div>
+      <div class="brand">{{ product.brand }}</div>
       <div>
         <h3>{{ product.name }}</h3>
       </div>
@@ -86,15 +86,14 @@ export default {
 @import "../../src/assets/scss/main.scss";
 .card-wrapper {
   width: calc(80% / 3);
-  height: 600px;
   max-width: 460px;
   margin: 20px 5px 40px;
   position: relative;
-  background-color: rgba(255, 193, 77, 0.433);
+
   .card-image {
     position: relative;
     width: 100%;
-    background-color: rgba(255, 0, 0, 0.288);
+
     &:hover .hovered-image {
       display: block;
     }
@@ -106,13 +105,14 @@ export default {
   }
   .tag {
     position: absolute;
-    top: 65%;
+    top: 70%;
     z-index: 3;
-    background-color: rgba(128, 0, 128, 0.363);
+
     height: 7%;
     width: 100%;
     display: flex;
     .badge {
+      height: 20px;
       color: rgb(255, 255, 255);
       display: flex;
       justify-content: center;
@@ -134,7 +134,13 @@ export default {
   .info {
     height: 20%;
     width: 100%;
-    background-color: rgba(0, 128, 0, 0.401);
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .brand {
+      color: rgb(142, 142, 142);
+    }
   }
 }
 .discount {

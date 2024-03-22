@@ -12,7 +12,7 @@ export default {
 <template>
   <div class="wrapper">
     <!-- bel trick quello di mettere l' array nell' oggetto, ci ho perso giusto un ora hahah -->
-    <div class="container debug">
+    <div class="container">
       <Card />
     </div>
   </div>
