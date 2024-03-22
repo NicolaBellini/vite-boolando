@@ -34,7 +34,16 @@ export default {
       <img :src="`src/assets/img/${product.frontImage}`" alt="" />
     </div>
     <div class="tag">
-      <div class="discount">{{ product.badges[1].type }}</div>
+      <div
+        class="badge"
+        :class="{
+          sost: product.badges[0].value === 'Sostenibilità',
+          discount: product.badges[0].value !== 'Sostenibilità',
+        }"
+      >
+        {{ product.badges[0].value }}
+      </div>
+      <div class="badge">{{ product.badges[1].value }}</div>
     </div>
     <div class="liked">
       <div>
@@ -65,6 +74,10 @@ export default {
     background-color: rgba(128, 0, 128, 0.363);
     height: 7%;
     width: 100%;
+    display: flex;
+    .badge {
+      margin: 10px 5px;
+    }
   }
   .liked {
     height: 50px;
@@ -82,5 +95,11 @@ export default {
     width: 100%;
     background-color: rgba(0, 128, 0, 0.401);
   }
+}
+.discount {
+  background-color: red;
+}
+.sost {
+  background-color: green;
 }
 </style>
