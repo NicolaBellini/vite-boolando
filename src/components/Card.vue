@@ -4,23 +4,38 @@ export default {
   data() {
     return {
       products: products.products,
+      newProducts: [],
     };
   },
-  // props: {
-  //   product: Object,
-  // },
+  computed() {},
   mounted() {
-    console.log(this.products);
+    this.newProducts = this.products.map((product) => ({
+      ...product,
+      badges: [
+        ...product.badges,
+        {
+          type: "",
+          value: "",
+        },
+      ],
+    }));
+    console.log(this.newProducts);
   },
 };
 </script>
 
 <template>
-  <div class="card-wrapper" v-for="(product, index) in products" :key="index">
+  <div
+    class="card-wrapper"
+    v-for="(product, index) in newProducts"
+    :key="index"
+  >
     <div class="card-image">
       <img :src="`src/assets/img/${product.frontImage}`" alt="" />
     </div>
-    <div class="tag"></div>
+    <div class="tag">
+      <div class="discount">{{ product.badges[1].type }}</div>
+    </div>
     <div class="liked">
       <div>
         <span><i class="fa-solid fa-heart"></i></span>
