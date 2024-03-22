@@ -11,6 +11,7 @@ export default {};
 
 <style lang="scss" scoped>
 .wrapper {
+  padding-top: 60px;
   height: 98vh;
   .container {
     text-align: center;

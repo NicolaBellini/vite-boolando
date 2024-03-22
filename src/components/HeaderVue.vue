@@ -1,16 +1,17 @@
 <!-- HEADER -->
 <script>
 export default {
-  // data() {
-  //   return {
-  //     logo:'boolean-logo.png',
-  //   }
-  // },
-  // methods: {
-  //   getImage(img){
-  //     return
-  //   }
-  // },
+  data() {
+    return {
+      img: "boolean-logo.png",
+      icons: [
+        '<i class="fa-regular fa-user"></i>',
+        '<i class="fa-regular fa-heart"></i>',
+        '<i class="fa-solid fa-bag-shopping"></i>',
+      ],
+    };
+  },
+  methods: {},
 };
 </script>
 
@@ -26,9 +27,7 @@ export default {
         <img src="../assets/img/boolean-logo.png" alt="" />
       </div>
       <div class="rigth">
-        <i class="fa-regular fa-user"></i>
-        <i class="fa-regular fa-heart"></i>
-        <i class="fa-solid fa-bag-shopping"></i>
+        <div v-for="(item, index) in icons" :key="index" v-html="item"></div>
       </div>
     </div>
   </div>
@@ -38,6 +37,7 @@ export default {
 @use "../assets/scss/variables" as *;
 
 .wrapper {
+  position: fixed;
   color: $header-words;
   background-color: $header-bg;
   height: 60px;
@@ -60,13 +60,14 @@ export default {
       }
     }
     .center {
-      width: 15%;
+      max-width: 14%;
+      min-width: 5%;
     }
     .rigth {
       width: 40%;
       display: flex;
       justify-content: flex-end;
-      i {
+      div {
         cursor: pointer;
         font-size: 1.2rem;
         margin-left: 10px;
