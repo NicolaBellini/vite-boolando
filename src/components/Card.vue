@@ -32,6 +32,11 @@ export default {
   >
     <div class="card-image">
       <img :src="`src/assets/img/${product.frontImage}`" alt="" />
+      <img
+        :src="`src/assets/img/${product.backImage}`"
+        alt=""
+        class="hovered-image"
+      />
     </div>
     <div class="tag">
       <!-- applico la classe sostenibilità solo se il .value è uguale a sostenibilità -->
@@ -79,8 +84,17 @@ export default {
   position: relative;
   background-color: rgba(255, 193, 77, 0.433);
   .card-image {
+    position: relative;
     width: 100%;
     background-color: rgba(255, 0, 0, 0.288);
+    &:hover .hovered-image {
+      display: block;
+    }
+    .hovered-image {
+      position: absolute;
+      top: 0;
+      display: none;
+    }
   }
   .tag {
     position: absolute;
@@ -91,13 +105,17 @@ export default {
     width: 100%;
     display: flex;
     .badge {
+      color: rgb(255, 255, 255);
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin: 10px 5px;
     }
   }
   .liked {
     height: 50px;
     width: 40px;
-    background-color: orange;
+    background-color: rgb(255, 255, 255);
     position: absolute;
     top: 20px;
     right: 0;
