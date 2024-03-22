@@ -34,6 +34,7 @@ export default {
       <img :src="`src/assets/img/${product.frontImage}`" alt="" />
     </div>
     <div class="tag">
+      <!-- applico la classe sostenibilità solo se il .value è uguale a sostenibilità -->
       <div
         class="badge"
         :class="{
@@ -43,6 +44,7 @@ export default {
       >
         {{ product.badges[0].value }}
       </div>
+      <!-- applico la classe discount o una stringa vuota se il value è diverso da sostenibilità o striga vuota -->
       <div
         class="badge"
         :class="{
@@ -53,9 +55,14 @@ export default {
         {{ product.badges[1].value }}
       </div>
     </div>
-    <div class="liked">
+    <div class="liked" @click="product.isInFavorites = !product.isInFavorites">
       <div>
-        <span><i class="fa-solid fa-heart"></i></span>
+        <span
+          ><i
+            class="fa-solid fa-heart"
+            :class="{ favorite: product.isInFavorites }"
+          ></i
+        ></span>
       </div>
     </div>
     <div class="info"></div>
@@ -109,5 +116,8 @@ export default {
 }
 .sost {
   background-color: green;
+}
+.favorite {
+  color: red;
 }
 </style>
