@@ -43,7 +43,15 @@ export default {
       >
         {{ product.badges[0].value }}
       </div>
-      <div class="badge">{{ product.badges[1].value }}</div>
+      <div
+        class="badge"
+        :class="{
+          discount: product.badges[1].value !== 'Sostenibilità',
+          '': product.badges[1].value !== '',
+        }"
+      >
+        {{ product.badges[1].value }}
+      </div>
     </div>
     <div class="liked">
       <div>
