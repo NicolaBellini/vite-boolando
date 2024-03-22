@@ -7,7 +7,7 @@ export default {
       newProducts: [],
     };
   },
-  computed() {},
+
   mounted() {
     this.newProducts = this.products.map((product) => ({
       ...product,
@@ -70,7 +70,15 @@ export default {
         ></span>
       </div>
     </div>
-    <div class="info"></div>
+    <div class="info">
+      <div>{{ product.brand }}</div>
+      <div>
+        <h3>{{ product.name }}</h3>
+      </div>
+      <div>
+        <span>{{ product.price }}</span>
+      </div>
+    </div>
   </div>
 </template>
 
