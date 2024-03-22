@@ -38,6 +38,7 @@ export default {
 
 .wrapper {
   position: fixed;
+  z-index: 999;
   color: $header-words;
   background-color: $header-bg;
   height: 60px;
