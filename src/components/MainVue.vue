@@ -1,18 +1,10 @@
 <!-- MAIN -->
 <script>
 import Card from "./Card.vue";
-import products from "./db.json";
+
 export default {
   components: {
     Card,
-  },
-  data() {
-    return {
-      productsList: products,
-    };
-  },
-  mounted() {
-    console.log(this.productsList);
   },
 };
 </script>
@@ -20,21 +12,22 @@ export default {
 <template>
   <div class="wrapper">
     <!-- bel trick quello di mettere l' array nell' oggetto, ci ho perso giusto un ora hahah -->
-    <Card
-      v-for="product in productsList.products"
-      :key="product.id"
-      :product="product"
-    />
+    <div class="container debug">
+      <Card />
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .wrapper {
   padding-top: 60px;
+  display: flex;
 
   .container {
+    margin: 0 auto;
     text-align: center;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
   }
 }

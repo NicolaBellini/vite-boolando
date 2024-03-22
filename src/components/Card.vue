@@ -1,18 +1,24 @@
 <script>
+import products from "./db.json";
 export default {
-  props: {
-    product: Object,
+  data() {
+    return {
+      products: products.products,
+    };
   },
+  // props: {
+  //   product: Object,
+  // },
   mounted() {
-    console.log(this.product);
+    console.log(this.products);
   },
 };
 </script>
 
 <template>
-  <div class="card-wrapper">
+  <div class="card-wrapper" v-for="(product, index) in products" :key="index">
     <div class="card-image">
-      <!-- <img src="`../../src/assets/img/${product.backImage}`" alt="" /> -->
+      <img :src="`src/assets/img/${product.frontImage}`" alt="" />
     </div>
     <div class="tag"></div>
     <div class="liked">
@@ -20,7 +26,7 @@ export default {
         <span><i class="fa-solid fa-heart"></i></span>
       </div>
     </div>
-    <div class="info">{{ product.name }}</div>
+    <div class="info"></div>
   </div>
 </template>
 
@@ -30,7 +36,7 @@ export default {
   width: calc(80% / 3);
   height: 600px;
   max-width: 460px;
-  margin: 20px 5px 180px;
+  margin: 20px 5px 40px;
   position: relative;
   background-color: rgba(255, 193, 77, 0.433);
   .card-image {
